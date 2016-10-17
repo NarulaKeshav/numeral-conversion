@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Numerical Format Conversions</title>
+    <meta name="description" content="Convert different numerical formats to desired numeral formats">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Numerical Format Conversions">
+    <meta property="og:description" content="Convert different numerical formats to desired numeral formats">
+    <meta property="og:site_name" content="NarulaKeshav">
+    <meta property="og:url" content="http://narulakeshav.com/numerical-conversion">
+    <link rel="shortcut icon" href="public/img/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="scss/design.css">
+  </head>
+  <body>
+    <div class="col-md-12">
+      <div class="col-md-10 col-md-offset-1">
+        <form class="col-md-10 col-md-offset-1 form-inline">
+          <h2>Numerical Format Conversion</h2>
+          <p>Convert decimal, binary, octal, or hexadecimal to any of the mentioned numerical format.</p>
+          <div class="form-group"><span id="text-to">Convert</span>
+            <select class="form-control" id="convert-from">
+              <option value="0">Select Format</option>
+              <option value="1">Binary</option>
+              <option value="2">Decimal</option>
+              <option value="3">Hexadecimal</option>
+              <option value="4">Octal</option>
+            </select>
+            <input class="form-control" type="text" placeholder="numerical value" id="field"><br>
+            <button class="btn btn-convert">Convert</button>
+            <button class="btn btn-clear">Clear</button>
+          </div>
+        </form>
+        <div class="col-md-10 col-md-offset-1 results">
+          <hr>
+          <p id="conversion"><span id="convert-from">Decimal:</span><span id="display-from">13423<sub>10</sub></span><br><span id="convert-to-x">Hex:</span><span id="display-x">0x346F<sub>16</sub></span><br><span id="convert-to-y">Binary:</span><span id="display-y">11010001101111<sub>2</sub></span><br><span id="convert-to-z">Octal:</span><span id="display-z">32157<sub>8</sub></span></p>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/convert.js"></script>
+  </body>
+</html>
