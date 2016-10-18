@@ -45,15 +45,10 @@ $(document).ready(function() {
     });
 
     $('.btn-clear').click(function(e) {
-        e.preventDefault();
-        clearAll();
-        $('#conversion').html('Nothing to show! :)');
-    });
-
-    function clearAll() {
+        // e.preventDefault();
         $('#field').val('');
-
-    }
+        $('#convert-from').val(0);
+    });
 
     function binaryToDecimal(binaryValue) {
         var arr = binaryValue.split('').reverse();
@@ -164,7 +159,7 @@ $(document).ready(function() {
     }
 
     function changeConvertText(n, x, y, z) {
-        $('#convert-from').html(n);
+        $('#convert-from-x').html(n);
         $('#convert-to-x').html(x);
         $('#convert-to-y').html(y);
         $('#convert-to-z').html(z);
@@ -203,7 +198,7 @@ $(document).ready(function() {
             $displayY = $('#display-y').html();
             $displayZ = $('#display-z').html();
 
-        $('#conversion').html('<span id="convert-from">' + convertFrom + '</span>' +
+        $('#conversion').html('<span id="convert-from-x">' + convertFrom + '</span>' +
                               '<span id="display-from">' + $displayFrom + '</span>' +
                               '<br>' +
                               '<span id="convert-to-x">' + $convertX + '</span>' +
