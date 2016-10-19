@@ -1,0 +1,68 @@
+doctype html
+html
+    head
+        title Numerical Format Conversions
+        meta(name='description', content='Convert different numerical formats to desired numeral formats')
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+
+        //- META TAGS FOR PREVIEW
+        meta(property='og:title', content='Numerical Format Conversions')
+        meta(property='og:description', content='Convert different numerical formats to desired numeral formats')
+        meta(property='og:site_name', content='NarulaKeshav')
+        meta(property='og:url', content='http://narulakeshav.com/numerical-conversion')
+
+        //- LINK TO CSS FILES
+        link(rel='shortcut icon', href='public/img/favicon.png')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+
+        //- Link to custom CSS file
+        link(rel='stylesheet', href='scss/design.css')
+
+        //- MathJAX Scripts
+        //-script(type='text/x-mathjax-config').
+            MathJax.Hub.Config({
+                tex2jax: {inlineMath: [['$','$'], ['\\\(','\\)']]},
+                "HTML-CSS": {
+                    preferredFont: "LaTeX"
+                }
+            });
+        //-script(type='text/javascript', async='', src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML')
+
+    body
+        .col-md-12
+            .col-md-10.col-md-offset-1
+                form.col-md-10.col-md-offset-1.form-inline
+                    h2 Numerical Format Conversion
+                    p Convert decimal, binary, octal, or hexadecimal to any of the mentioned numerical format.
+                    .form-group
+                        span#text-to Convert
+                        select.form-control#convert-from
+                            option(value='0') Select Format
+                            option(value='1') Binary
+                            option(value='2') Decimal
+                            option(value='3') Hexadecimal
+                            option(value='4') Octal
+                        input.form-control(type='text' placeholder='numerical value' id='field')
+                        br
+                        button.btn.btn-convert Convert
+                        button.btn.btn-clear Clear
+                .col-md-10.col-md-offset-1.results
+                    br
+                    hr
+                    p#conversion
+                        span#convert-from-x Decimal:
+                        span#display-from 13423<sub>10</sub>
+                        br
+                        span#convert-to-x Hex:
+                        span#display-x 0x346F<sub>16</sub>
+                        br
+                        span#convert-to-y Binary:
+                        span#display-y 11010001101111<sub>2</sub>
+                        br
+                        span#convert-to-z Octal:
+                        span#display-z 32157<sub>8</sub>
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+        script(src='js/convert.js')
