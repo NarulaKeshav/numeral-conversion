@@ -23,10 +23,10 @@ body {
     height: 100vh;
     font-family: $font;
     color: #444;
+    padding-top: 3%;
 }
 form {
     h2 {
-        margin-top: 4%;
         display: inline-block;
         padding: 14px 25px;
         color: $white;
@@ -162,7 +162,7 @@ form {
             display: block;
         }
         p {
-            font: $light 18px $font;
+            font: $light 16px $font;
             span {
                 font: $light 16px $font;
             }
@@ -170,7 +170,7 @@ form {
             #convert-to-x,
             #convert-to-y,
             #convert-to-z {
-                width: 65px !important;
+                width: 60px !important;
             }
         }
     }
