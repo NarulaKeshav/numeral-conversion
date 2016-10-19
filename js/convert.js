@@ -80,6 +80,7 @@ $(document).ready(function() {
             decimalValue = Math.floor(decimalValue / 2);
         }
         var appendZero = Math.floor(binary.length / 4);
+        console.log('binary length: ' + binary.length);
         console.log('number of zeroes to append: ' + appendZero);
         console.log('before appending zero: ' + binary);
         console.log('doing "0".repeat(appendZero) operation: ' + '0'.repeat(appendZero));
