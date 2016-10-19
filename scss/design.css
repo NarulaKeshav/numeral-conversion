@@ -8,85 +8,124 @@ body {
   height: 100vh;
   font-family: "Roboto Slab";
   color: #444; }
-  body form h2 {
-    margin-top: 4%;
-    display: inline-block;
-    padding: 14px 25px;
-    color: #FFF;
-    background: #1ABC9C;
-    margin-bottom: 0; }
-  body form p {
-    color: #888;
-    display: inline-block;
-    padding: 8px 15px;
-    background: #FFF;
-    box-shadow: 2px 7px 15px rgba(0, 0, 0, 0.1);
-    font: 300 16px "Roboto Slab";
-    margin-bottom: 5%; }
-  body form .form-group .form-control {
-    border: none;
-    border-radius: 2px;
-    margin-right: 6px;
-    margin-left: 6px;
-    font: 300 16px "Roboto Slab";
-    box-shadow: 2px 7px 15px rgba(0, 0, 0, 0.06); }
-  body form .form-group select {
-    -webkit-appearance: menulist-button;
-    height: 50px;
-    width: 250px !important; }
-  body form .form-group label {
-    display: inline-block; }
-  body form .form-group #text-to {
-    padding: 10px;
-    font: 300 16px "Roboto Slab"; }
-  body form .form-group input {
-    padding: 25px 20px;
-    width: 400px !important; }
-  body form .form-group .btn,
-  body form .form-group .btn:focus {
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    transition: all 0.3s;
-    color: #FFF;
-    float: right;
-    margin: 3% 0px 0 8px;
-    padding: 10px 40px;
-    font: 300 18px "Roboto Slab";
-    outline: 0; }
-  body form .form-group .btn-convert {
-    box-shadow: 2px 7px 15px rgba(0, 0, 0, 0.06);
-    background: #1ABC9C; }
-  body form .form-group .btn-convert:hover {
-    background: #16A085;
-    color: #FFF; }
-  body form .form-group .btn-clear {
-    background: #DEDEDE;
-    color: #888; }
-  body form .form-group .btn-clear:hover {
-    background: #CCC;
+
+form h2 {
+  margin-top: 4%;
+  display: inline-block;
+  padding: 14px 25px;
+  color: #FFF;
+  background: #1ABC9C;
+  margin-bottom: 0; }
+form p {
+  color: #888;
+  display: inline-block;
+  padding: 8px 15px;
+  background: #FFF;
+  box-shadow: 2px 7px 15px rgba(0, 0, 0, 0.1);
+  font: 300 16px "Roboto Slab";
+  margin-bottom: 5%; }
+form .form-group .form-control {
+  border: none;
+  border-radius: 2px;
+  margin-right: 6px;
+  margin-left: 6px;
+  font: 300 16px "Roboto Slab";
+  box-shadow: 2px 7px 15px rgba(0, 0, 0, 0.06); }
+form .form-group select {
+  -webkit-appearance: menulist-button;
+  height: 50px;
+  width: 250px !important; }
+form .form-group label {
+  display: inline-block; }
+form .form-group #text-to {
+  padding: 10px;
+  font: 300 16px "Roboto Slab"; }
+form .form-group input {
+  padding: 25px 20px;
+  width: 400px !important; }
+form .form-group .btn,
+form .form-group .btn:focus {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #FFF;
+  float: right;
+  margin: 3% 0px 0 8px;
+  padding: 10px 40px;
+  font: 300 18px "Roboto Slab";
+  outline: 0; }
+form .form-group .btn-convert {
+  box-shadow: 2px 7px 15px rgba(0, 0, 0, 0.06);
+  background: #1ABC9C; }
+form .form-group .btn-convert:hover {
+  background: #16A085;
+  color: #FFF; }
+form .form-group .btn-clear {
+  background: #DEDEDE;
+  color: #888; }
+form .form-group .btn-clear:hover {
+  background: #CCC;
+  color: #666; }
+
+.results {
+  padding-top: 2%; }
+  .results hr {
+    border-width: 2px;
+    border-color: rgba(0, 0, 0, 0.1); }
+  .results #conversion {
+    font: 300 24px "Roboto Slab";
     color: #666; }
-  body .results {
-    padding-top: 2%; }
-    body .results hr {
-      border-width: 2px;
-      border-color: rgba(0, 0, 0, 0.1); }
-    body .results #conversion {
-      font: 300 24px "Roboto Slab";
-      color: #666; }
-      body .results #conversion #convert-from, body .results #conversion #convert-to-x, body .results #conversion #convert-to-y, body .results #conversion #convert-to-z {
-        display: inline-block;
-        width: 100px; }
-      body .results #conversion #display-from, body .results #conversion #display-x, body .results #conversion #display-y, body .results #conversion #display-z {
-        letter-spacing: 2px;
-        background: #FFF;
-        box-shadow: 2px 7px 15px rgba(0, 0, 0, 0.06);
-        display: inline-block;
-        padding: 8px 16px;
-        border-radius: 3px;
-        margin: 4px 10px; }
-      body .results #conversion #display-x, body .results #conversion #display-y, body .results #conversion #display-z {
-        background: #1ABC9C;
-        color: #FFF; }
+    .results #conversion #convert-from-x, .results #conversion #convert-to-x, .results #conversion #convert-to-y, .results #conversion #convert-to-z {
+      display: inline-block;
+      width: 100px; }
+    .results #conversion #display-from, .results #conversion #display-x, .results #conversion #display-y, .results #conversion #display-z {
+      letter-spacing: 2px;
+      background: #FFF;
+      box-shadow: 2px 7px 15px rgba(0, 0, 0, 0.06);
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 3px;
+      margin: 4px 10px; }
+    .results #conversion #display-x, .results #conversion #display-y, .results #conversion #display-z {
+      background: #1ABC9C;
+      color: #FFF; }
+
+/* Media query */
+@media (max-width: 768px) {
+  body {
+    padding-top: 5%; }
+
+  form h2 {
+    font: 300 18px "Roboto Slab";
+    padding: 10px 14px;
+    box-shadow: 2px 7px 15px rgba(0, 0, 0, 0.1); }
+  form p {
+    font: 300 15px "Roboto Slab"; }
+  form .form-group #text-to {
+    color: #666;
+    display: inline-block;
+    padding: 5px 10px 10px; }
+  form .form-group select.form-control,
+  form .form-group input.form-control {
+    width: 100% !important;
+    margin-bottom: 10px; }
+  form .form-group .btn {
+    display: inline-block;
+    padding: 6px 20px;
+    position: relative;
+    top: -10px; }
+
+  .results hr {
+    display: block; }
+  .results p {
+    font: 300 18px "Roboto Slab"; }
+    .results p span {
+      font: 300 16px "Roboto Slab"; }
+    .results p #convert-from-x,
+    .results p #convert-to-x,
+    .results p #convert-to-y,
+    .results p #convert-to-z {
+      width: 65px !important; } }
 
 /*# sourceMappingURL=design.css.map */
