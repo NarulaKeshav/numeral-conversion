@@ -23,102 +23,154 @@ body {
     height: 100vh;
     font-family: $font;
     color: #444;
+    padding-top: 3%;
+}
+form {
+    h2 {
+        display: inline-block;
+        padding: 14px 25px;
+        color: $white;
+        background: $primary;
+        margin-bottom: 0;
+    }
+    p {
+        color: #888;
+        display: inline-block;
+        padding: 8px 15px;
+        background: $white;
+        box-shadow: 2px 7px 15px rgba(0,0,0,0.1);
+        font: $light 16px $font;
+        margin-bottom: 5%;
+    }
+    .form-group {
+        .form-control {
+            border: none;
+            border-radius: 2px;
+            margin-right: 6px;
+            margin-left: 6px;
+            font: $light 16px $font;
+            box-shadow: 2px 7px 15px rgba(0,0,0,0.06);
+        }
+        select {
+            -webkit-appearance: menulist-button;
+            height: 50px;
+            width: 250px !important;
+        }
+        label {
+            display: inline-block;
+        }
+        #text-to {
+            padding: 10px;
+            font: $light 16px $font;
+        }
+        input {
+            padding: 25px 20px;
+            width: 400px !important;
+        }
+        .btn,
+        .btn:focus {
+            @include transition(.3s);
+            color: $white;
+            float: right;
+            margin: 3% 0px 0 8px;
+            padding: 10px 40px;
+            font: $light 18px $font;
+            outline: 0;
+        }
+        .btn-convert {
+            box-shadow: 2px 7px 15px rgba(0,0,0,0.06);
+            background: $primary;
+        }
+        .btn-convert:hover {
+            background: $secondary;
+            color: $white;
+        }
+        .btn-clear {
+            background: #DEDEDE;
+            color: #888;
+        }
+        .btn-clear:hover {
+            background: #CCC;
+            color: #666;
+        }
+    }
+}
+.results {
+    padding-top: 2%;
+    hr {
+        border-width: 2px;
+        border-color: rgba(0,0,0,0.1);
+    }
+    #conversion {
+        font: $light 24px $font;
+        color: #666;
+        #convert-from-x, #convert-to-x, #convert-to-y, #convert-to-z {
+            display: inline-block;
+            width: 100px;
+        }
+        #display-from, #display-x, #display-y, #display-z {
+            letter-spacing: 2px;
+            background: $white;
+            box-shadow: 2px 7px 15px rgba(0,0,0,0.06);
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 3px;
+            margin: 4px 10px;
+        }
+        #display-x, #display-y, #display-z {
+            background: $primary;
+            color: $white;
+        }
+    }
+}
+
+/* Media query */
+@media(max-width: 768px) {
+    body {
+        padding-top: 5%;
+    }
     form {
         h2 {
-            margin-top: 4%;
-            display: inline-block;
-            padding: 14px 25px;
-            color: $white;
-            background: $primary;
-            margin-bottom: 0;
+            font: $light 18px $font;
+            padding: 10px 14px;
+            box-shadow: 2px 7px 15px rgba(0,0,0,0.1);
         }
         p {
-            color: #888;
-            display: inline-block;
-            padding: 8px 15px;
-            background: $white;
-            box-shadow: 2px 7px 15px rgba(0,0,0,0.1);
-            font: $light 16px $font;
-            margin-bottom: 5%;
+            font: $light 15px $font;
         }
         .form-group {
-            .form-control {
-                border: none;
-                border-radius: 2px;
-                margin-right: 6px;
-                margin-left: 6px;
-                font: $light 16px $font;
-                box-shadow: 2px 7px 15px rgba(0,0,0,0.06);
-            }
-            select {
-                -webkit-appearance: menulist-button;
-                height: 50px;
-                width: 250px !important;
-            }
-            label {
-                display: inline-block;
-            }
             #text-to {
-                padding: 10px;
-                font: $light 16px $font;
-            }
-            input {
-                padding: 25px 20px;
-                width: 400px !important;
-            }
-            .btn,
-            .btn:focus {
-                @include transition(.3s);
-                color: $white;
-                float: right;
-                margin: 3% 0px 0 8px;
-                padding: 10px 40px;
-                font: $light 18px $font;
-                outline: 0;
-            }
-            .btn-convert {
-                box-shadow: 2px 7px 15px rgba(0,0,0,0.06);
-                background: $primary;
-            }
-            .btn-convert:hover {
-                background: $secondary;
-                color: $white;
-            }
-            .btn-clear {
-                background: #DEDEDE;
-                color: #888;
-            }
-            .btn-clear:hover {
-                background: #CCC;
                 color: #666;
+                display: inline-block;
+                padding: 5px 10px 10px;
+            }
+            select.form-control,
+            input.form-control {
+                width: 100% !important;
+                margin-bottom: 10px;
+            }
+            .btn {
+                display: inline-block;
+                padding: 6px 20px;
+                position: relative;
+                top: -10px;
             }
         }
     }
     .results {
-        padding-top: 2%;
         hr {
-            border-width: 2px;
-            border-color: rgba(0,0,0,0.1);
+            display: block;
         }
-        #conversion {
-            font: $light 24px $font;
-            color: #666;
-            #convert-from, #convert-to-x, #convert-to-y, #convert-to-z {
-                display: inline-block;
-                width: 100px;
+        p {
+            font: $light 16px $font;
+            span {
+                font: $light 16px $font;
             }
-            #display-from, #display-x, #display-y, #display-z {
-                letter-spacing: 2px;
-                background: $white;
-                box-shadow: 2px 7px 15px rgba(0,0,0,0.06);
-                display: inline-block;
-                padding: 8px 16px;
-                border-radius: 3px;
-                margin: 4px 10px;
-            }
-            #display-x, #display-y, #display-z {
-                background: $primary;
-                color: $white;
+            #convert-from-x,
+            #convert-to-x,
+            #convert-to-y,
+            #convert-to-z {
+                width: 60px !important;
             }
         }
     }
