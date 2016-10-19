@@ -134,7 +134,7 @@ $(document).ready(function() {
 
     function hexadecimalToDecimal(hexValue) {
         if(hexValue.substring(0, 2) == '0x') hexValue = hexValue.replace('0x', '');
-        var arr = hexValue.split('').reverse().toUpperCase();
+        var arr = hexValue.toUpperCase().split('').reverse();
         var value = 0;
         for (var i = 0; i < arr.length; i++) {
             if (arr[i] == 'A' || arr[i] == 'a') arr[i] = '10';
