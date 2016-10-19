@@ -79,6 +79,10 @@ $(document).ready(function() {
             binary += remainder.toString();
             decimalValue = Math.floor(decimalValue / 2);
         }
+        var appendZero = Math.floor(binary.length / 4);
+        for (var i = 0; i < appendZero; i++) {
+            binary = '0'.repeat((i+1)) + binary;
+        }
         return binary.split('').reverse().join('');
     }
 
