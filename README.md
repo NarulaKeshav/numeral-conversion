@@ -28,14 +28,15 @@ function binaryToDecimal(binaryVal) { // binaryVal = '101010110101'
 
 ### From Decimal to Binary, Hex, and Octal
 Then once I get everything in decimal system, call the appropriate method to convert the system to the desired system. Here's the snippet of how I did it:
+<br>
 Decimal to Binary
 ```
 // Converts decimal (base 10) to binary (base 2)
 function decimalToBinary(decimalVal) {
     var binary = '';
         remainder = 0;
-    while (decimalValue > 0) { // As long as the divident (decimalVal) > 0, keep going
-        remainder = decimalValue % 2; // gets the remainder (either 1 or 0)
+    while (decimalVal > 0) { // As long as the divident (decimalVal) > 0, keep going
+        remainder = decimalVal % 2; // gets the remainder (either 1 or 0)
         binary += remainder.toString(); // concatenate the remainder to binary variable
         decimalValue = Math.floor(decimalVal / 2); // divide by 2 and update divident
     }
@@ -49,8 +50,8 @@ Decimal to Octal
 function decimalToOctal(decimalVal) {
     var octal = '';
         remainder = 0;
-    while (decimalValue > 0) { // As long as the divident (decimalVal) > 0, keep going
-        remainder = decimalValue % 8; // gets the remainder (between 0-7)
+    while (decimalVal > 0) { // As long as the divident (decimalVal) > 0, keep going
+        remainder = decimalVal % 8; // gets the remainder (between 0-7)
         octal += remainder.toString(); // concatenate the remainder to octal variable
         decimalValue = Math.floor(decimalVal / 8); // divide by 8 and update divident
     }
@@ -65,7 +66,7 @@ function decimalToHex(decimalVal) {
     var hex = '';
         remainder = 0;
     while (decimalValue > 0) { // As long as the divident (decimalVal) > 0, keep going
-        remainder = decimalValue % 16; // gets the remainder (between 0-9 and A-F)
+        remainder = decimalVal % 16; // gets the remainder (between 0-9 and A-F)
         if (remainder === 10) hex+= 'A';
         else if (remainder === 11) hex+= 'B';
         else if (remainder === 12) hex+= 'C';
