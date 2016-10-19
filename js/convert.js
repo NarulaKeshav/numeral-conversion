@@ -134,15 +134,15 @@ $(document).ready(function() {
 
     function hexadecimalToDecimal(hexValue) {
         if(hexValue.substring(0, 2) == '0x') hexValue = hexValue.replace('0x', '');
-        var arr = hexValue.split('').reverse();
+        var arr = hexValue.split('').reverse().toUpperCase();
         var value = 0;
         for (var i = 0; i < arr.length; i++) {
             if (arr[i] == 'A' || arr[i] == 'a') arr[i] = '10';
-            else if (arr[i] == 'B' || arr[i] == 'b') arr[i] = '11';
-            else if (arr[i] == 'C' || arr[i] == 'c') arr[i] = '12';
-            else if (arr[i] == 'D' || arr[i] == 'd') arr[i] = '13';
-            else if (arr[i] == 'E' || arr[i] == 'e') arr[i] = '14';
-            else if (arr[i] == 'F' || arr[i] == 'f') arr[i] = '15';
+            else if (arr[i] == 'B') arr[i] = '11';
+            else if (arr[i] == 'C') arr[i] = '12';
+            else if (arr[i] == 'D') arr[i] = '13';
+            else if (arr[i] == 'E') arr[i] = '14';
+            else if (arr[i] == 'F') arr[i] = '15';
             value = value + (Math.pow(16, i) * arr[i]);
         }
         return value;
