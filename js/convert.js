@@ -45,15 +45,10 @@ $(document).ready(function() {
     });
 
     $('.btn-clear').click(function(e) {
-        e.preventDefault();
-        clearAll();
-        $('#conversion').html('Nothing to show! :)');
-    });
-
-    function clearAll() {
+        // e.preventDefault();
         $('#field').val('');
-
-    }
+        $('#convert-from').val(0);
+    });
 
     function binaryToDecimal(binaryValue) {
         var arr = binaryValue.split('').reverse();
@@ -139,15 +134,15 @@ $(document).ready(function() {
 
     function hexadecimalToDecimal(hexValue) {
         if(hexValue.substring(0, 2) == '0x') hexValue = hexValue.replace('0x', '');
-        var arr = hexValue.split('').reverse();
+        var arr = hexValue.split('').reverse().toUpperCase();
         var value = 0;
         for (var i = 0; i < arr.length; i++) {
             if (arr[i] == 'A' || arr[i] == 'a') arr[i] = '10';
-            else if (arr[i] == 'B' || arr[i] == 'b') arr[i] = '11';
-            else if (arr[i] == 'C' || arr[i] == 'c') arr[i] = '12';
-            else if (arr[i] == 'D' || arr[i] == 'd') arr[i] = '13';
-            else if (arr[i] == 'E' || arr[i] == 'e') arr[i] = '14';
-            else if (arr[i] == 'F' || arr[i] == 'f') arr[i] = '15';
+            else if (arr[i] == 'B') arr[i] = '11';
+            else if (arr[i] == 'C') arr[i] = '12';
+            else if (arr[i] == 'D') arr[i] = '13';
+            else if (arr[i] == 'E') arr[i] = '14';
+            else if (arr[i] == 'F') arr[i] = '15';
             value = value + (Math.pow(16, i) * arr[i]);
         }
         return value;
@@ -164,7 +159,7 @@ $(document).ready(function() {
     }
 
     function changeConvertText(n, x, y, z) {
-        $('#convert-from').html(n);
+        $('#convert-from-x').html(n);
         $('#convert-to-x').html(x);
         $('#convert-to-y').html(y);
         $('#convert-to-z').html(z);
@@ -203,7 +198,7 @@ $(document).ready(function() {
             $displayY = $('#display-y').html();
             $displayZ = $('#display-z').html();
 
-        $('#conversion').html('<span id="convert-from">' + convertFrom + '</span>' +
+        $('#conversion').html('<span id="convert-from-x">' + convertFrom + '</span>' +
                               '<span id="display-from">' + $displayFrom + '</span>' +
                               '<br>' +
                               '<span id="convert-to-x">' + $convertX + '</span>' +
