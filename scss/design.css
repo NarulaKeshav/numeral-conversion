@@ -119,13 +119,13 @@ form .form-group .btn-clear:hover {
   .results hr {
     display: block; }
   .results p {
-    font: 300 18px "Roboto Slab"; }
+    font: 300 16px "Roboto Slab"; }
     .results p span {
       font: 300 16px "Roboto Slab"; }
     .results p #convert-from-x,
     .results p #convert-to-x,
     .results p #convert-to-y,
     .results p #convert-to-z {
-      width: 65px !important; } }
+      width: 60px !important; } }
 
 /*# sourceMappingURL=design.css.map */
