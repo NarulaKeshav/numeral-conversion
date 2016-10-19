@@ -80,9 +80,11 @@ $(document).ready(function() {
             decimalValue = Math.floor(decimalValue / 2);
         }
         var appendZero = Math.floor(binary.length / 4);
-        for (var i = 0; i < appendZero; i++) {
-            binary = '0'.repeat((i+1)) + binary;
-        }
+        console.log('number of zeroes to append: ' + appendZero);
+        console.log('before appending zero: ' + binary);
+        console.log('doing "0".repeat(appendZero) operation: ' + '0'.repeat(appendZero));
+        binary = '0'.repeat(appendZero) + binary;
+        console.log('after appending zero: ' + binary);
         return binary.split('').reverse().join('');
     }
 
